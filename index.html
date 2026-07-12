@@ -1,9 +1,571 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>MixNBuy BD</title>
+
+    <!-- Basic -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+     <meta name="theme-color" content="#00c853">
+
+<meta property="og:url" content="https://YOUR-GITHUB-PAGES-LINK">
+
+<meta property="og:site_name" content="MixNBuy BD">
+    <title>MixNBuy BD | Online Shopping Bangladesh</title>
+
+    <meta name="description"
+        content="MixNBuy BD - বাংলাদেশের বিশ্বস্ত অনলাইন শপ। Electronics, Fashion, Kitchen এবং আরও অনেক পণ্য।">
+
+    <meta name="keywords"
+        content="MixNBuy BD, Bangladesh Online Shop, Electronics, Kitchen, Fashion">
+
+    <meta name="author"
+        content="MixNBuy BD">
+
+    <!-- Open Graph -->
+
+    <meta property="og:title"
+        content="MixNBuy BD">
+
+    <meta property="og:description"
+        content="Premium Online Shopping Experience">
+
+    <meta property="og:image"
+        content="images/banner.png">
+
+    <meta property="og:type"
+        content="website">
+
+    <!-- Favicon -->
+
+    <link rel="icon"
+        href="images/logo.png">
+
+    <!-- Google Font -->
+
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="./css/style.css">
+
 </head>
+
 <body>
-    <h1>Welcome to MixNBuy BD</h1>
+
+<!-- ===========================
+HEADER
+=========================== -->
+
+<header class="header">
+
+    <div class="container">
+
+        <a href="#home" class="logo">
+    <img src="images/logo.png" alt="MixNBuy BD">
+</a>
+        <nav class="navbar">
+
+            <ul>
+
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+
+                <li>
+                    <a href="#products">Products</a>
+                </li>
+
+                <li>
+                    <a href="#categories">Categories</a>
+                </li>
+
+                <li>
+                    <a href="#about">About</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+        <div class="header-icons">
+
+            <button id="searchBtn">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+            </button>
+
+            <a href="https://wa.me/8801401637310"
+                target="_blank">
+
+                <i class="fa-brands fa-whatsapp"></i>
+
+            </a>
+
+            <button id="menuBtn">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+<!-- ===========================
+HERO SECTION
+=========================== -->
+
+<section class="hero"
+    id="home">
+
+    <div class="hero-overlay"></div>
+
+    <img
+    class="hero-image"
+    src="images/banner.png"
+    alt="MixNBuy BD Banner"
+    loading="eager">
+        
+    <div class="hero-content">
+
+        <h1>
+
+            Welcome To
+
+            <span>
+
+                MixNBuyBD
+
+            </span>
+
+        </h1>
+
+        <p>
+
+            Electronics • Fashion • Kitchen • Lifestyle Products
+
+        </p>
+
+        <a href="#products"
+            class="btn">
+
+            Shop Now
+
+        </a>
+
+    </div>
+
+</section>
+
+<!-- ===========================
+ SEARCH CATEGORY SECTION
+=========================== -->
+
+<section class="categories" id="categories">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Shop By Category</h2>
+
+            <p>Select your favorite category</p>
+
+        </div>
+
+        <div class="category-grid">
+
+            <div class="category-card" data-category="Electronics">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+                <h3>Electronics</h3>
+            </div>
+
+            <div class="category-card" data-category="Fashion">
+                <i class="fa-solid fa-shirt"></i>
+                <h3>Fashion</h3>
+            </div>
+
+            <div class="category-card" data-category="Kitchen">
+                <i class="fa-solid fa-kitchen-set"></i>
+                <h3>Kitchen</h3>
+            </div>
+
+            <div class="category-card" data-category="Beauty">
+                <i class="fa-solid fa-heart"></i>
+                <h3>Beauty</h3>
+            </div>
+
+            <div class="category-card" data-category="Others">
+                <i class="fa-solid fa-gift"></i>
+                <h3>Others</h3>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===========================
+FEATURED PRODUCTS
+=========================== -->
+
+<section class="featured-products">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Featured Products</h2>
+
+            <p>Latest products from Stock</p>
+
+        </div>
+
+        <div id="featuredProducts" class="product-grid">
+
+            <div class="loading-card">
+
+                <i class="fa-solid fa-spinner fa-spin"></i>
+
+                <p>Loading Featured Products...</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===========================
+ALL PRODUCTS
+=========================== -->
+
+<section class="products" id="products">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>All Products</h2>
+
+            <p>Browse all available products</p>
+
+        </div>
+
+       <div class="product-toolbar">
+
+    <div class="search-box">
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search Products...">
+
+        <button type="button">
+            <i class="fa-solid fa-search"></i>
+        </button>
+    </div>
+
+    <select id="categoryFilter">
+        <option value="All">All Categories</option>
+        <option value="Electronics">Electronics</option>
+        <option value="Fashion">Fashion</option>
+        <option value="Kitchen">Kitchen</option>
+        <option value="Beauty">Beauty</option>
+        <option value="Others">Others</option>
+    </select>
+
+</div>
+
+        <div id="productGrid" class="product-grid">
+
+            <div class="loading-card">
+
+                <i class="fa-solid fa-spinner fa-spin"></i>
+
+                <p>Loading Products...</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===========================
+PRODUCT MODAL
+=========================== -->
+
+<div class="product-modal" id="productModal">
+
+    <div class="modal-content">
+
+        <button class="close-modal" id="closeModal">
+
+            &times;
+
+        </button>
+
+        <div class="modal-image">
+
+            <img
+                src="images/no-image.png"
+                id="modalImage"
+                alt="Product">
+
+        </div>
+
+        <div class="modal-info">
+
+            <span
+                id="modalCategory"
+                class="badge">
+
+                Category
+
+            </span>
+
+            <h2 id="modalTitle">
+
+                Product Name
+
+            </h2>
+
+            <h3 id="modalPrice">
+
+                ৳0
+
+            </h3>
+
+            <p id="modalDescription">
+
+                Product Description
+
+            </p>
+
+            <button
+                id="orderNowBtn"
+                class="btn">
+
+                <i class="fa-brands fa-whatsapp"></i>
+
+                Order Now
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+<!-- ===========================
+WHY CHOOSE US
+=========================== -->
+
+<section class="why-us">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Why Choose MixNBuy BD?</h2>
+            <p>We always try to provide the best shopping experience.</p>
+        </div>
+
+        <div class="why-grid">
+
+            <div class="why-card">
+                <i class="fa-solid fa-truck-fast"></i>
+                <h3>Fast Delivery</h3>
+                <p>Quick delivery all over Bangladesh.</p>
+            </div>
+
+            <div class="why-card">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h3>Trusted Products</h3>
+                <p>Quality products with reliable service.</p>
+            </div>
+
+            <div class="why-card">
+                <i class="fa-solid fa-headset"></i>
+                <h3>24/7 Support</h3>
+                <p>Always ready to help our customers.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===========================
+ABOUT
+=========================== -->
+
+<section id="about" class="about">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>About MixNBuy BD</h2>
+        </div>
+
+        <p>
+
+            MixNBuy BD is a modern online shopping platform.
+
+            Our products are managed directly from Stock.
+
+            We provide Electronics, Fashion, Kitchen and many more products.
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ===========================
+CONTACT
+=========================== -->
+
+<section id="contact" class="contact">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Contact Us</h2>
+        </div>
+
+        <div class="contact-box">
+
+            <p>
+    <i class="fa-brands fa-whatsapp"></i>
+
+    WhatsApp :
+   <a href="https://wa.me/8801401637310?text=আসসালামু%20আলাইকুম,%20আমি%20MixNBuy%20BD%20থেকে%20একটি%20পণ্য%20সম্পর্কে%20জানতে%20চাই।"
+   target="_blank"
+   class="whatsapp-link">
+
+    MixNBuy BD
+
+</a>
+
+          <p>
+    <i class="fa-brands fa-facebook"></i>
+
+    Facebook :
+    <a href="https://www.facebook.com/MixNbuy.BD/"
+       target="_blank"
+       style="color:#1877F2; text-decoration:none;">
+
+        MixNBuy BD
+
+    </a>
+</p>
+
+            <p>
+
+                <i class="fa-solid fa-envelope"></i>
+
+                Email :
+                mixnbuy.bd@gmail.com
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===========================
+FLOATING WHATSAPP
+=========================== -->
+
+<a href="https://wa.me/8801401637310"
+
+class="floating-whatsapp"
+
+target="_blank"
+
+title="Chat on WhatsApp">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+<!-- ===========================
+FOOTER
+=========================== -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-content">
+
+
+<p>
+
+© 2026 MixNBuy BD
+
+All Rights Reserved.
+
+</p>
+
+<div class="footer-social">
+
+<a href="https://www.facebook.com/MixNbuy.BD/" target="_blank">
+
+<i class="fa-brands fa-facebook"></i>
+
+</a>
+
+<a href="https://wa.me/8801401637310">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</footer>
+
+<button id="backToTop">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<script type="module" src="js/app.js"></script>
+
 </body>
+
 </html>
