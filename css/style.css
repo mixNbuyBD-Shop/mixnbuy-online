@@ -1776,3 +1776,18 @@ BACK TO TOP BUTTON
 .whatsapp-link:hover{
     color:#00D26A;
 }
+
+.hero-content h1,
+.hero-content p{
+    transition: opacity .5s ease, transform .5s ease;
+}
+
+.fade-out{
+    opacity:0;
+    transform:translateY(20px);
+}
+
+.fade-in{
+    opacity:1;
+    transform:translateY(0);
+}
